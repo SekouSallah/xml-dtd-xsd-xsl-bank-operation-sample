@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE releve SYSTEM "operation.dtd">
+<releve RIB="32001988776655443321">
+    <dateReleve>2025-02-01</dateReleve>
+    <solde>7800000</solde>
+
+    <operations dateDebut="2024-10-01" dateFin="2024-10-31">
+        <operation type="CREDIT" date="2024-10-05" montant="300000" description="Salaire mensuel"/>
+        <operation type="DEBIT" date="2024-10-08" montant="15000" description="Netflix + Spotify"/>
+        <operation type="DEBIT" date="2024-10-12" montant="85000" description="Ordinateur portable - acompte"/>
+        <operation type="CREDIT" date="2024-10-20" montant="50000" description="Remboursement ami"/>
+    </operations>
+
+    <operations dateDebut="2024-11-01" dateFin="2024-11-30">
+        <operation type="DEBIT" date="2024-11-03" montant="60000" description="Loyer appartement"/>
+        <operation type="DEBIT" date="2024-11-10" montant="3500" description="Frais de banque"/>
+        <operation type="CREDIT" date="2024-11-12" montant="120000" description="Revenus freelance"/>
+    </operations>
+
+    <operations dateDebut="2024-12-01" dateFin="2024-12-31">
+        <operation type="DEBIT" date="2024-12-07" montant="25000" description="Courses de fin d'année"/>
+        <operation type="CREDIT" date="2024-12-25" montant="500000" description="Prime de Noël"/>
+        <operation type="DEBIT" date="2024-12-27" montant="18000" description="Achat cadeaux"/>
+    </operations>
+</releve>
