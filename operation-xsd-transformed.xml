@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE releve SYSTEM "operation.dtd">
-<releve RIB="1232091201922">
+<releve xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="operation.xsd" RIB="289201023422">
     <dateReleve>2025-11-30</dateReleve>
-    <solde>5000000</solde>
+    <solde>20002</solde>
     <operations dateDebut="2024-12-01" dateFin="2025-11-30">
-        
         <operation type="CREDIT" date="2024-12-01" montant="200000" description="Paiement client - Vente Téléphone"/>
         <operation type="CREDIT" date="2024-12-02" montant="350000" description="Vente Laptop HP i5"/>
         
         <operation type="DEBIT" date="2024-12-06" montant="120000" description="Paiement fournisseur - stock Accessoires"/>
         <operation type="DEBIT" date="2024-12-09" montant="300000" description="Achat stock Téléphones"/>
-        <operation type="CREDIT" date="2024-12-13" montant="85000"  description="Paiement électricité boutique"/>
+        <operation type="DEBIT" date="2024-12-13" montant="85000"  description="Paiement électricité boutique"/>
         <operation type="DEBIT" date="2024-12-20" montant="100000" description="Paiement Mois - Employé Caissier"/>
         <operation type="DEBIT" date="2024-12-28" montant="50000"  description="Maintenance informatique"/>
         
     </operations>
-    
 </releve>

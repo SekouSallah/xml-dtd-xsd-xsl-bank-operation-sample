@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!ELEMENT releve (dateReleve, solde, operations+) >
+<!ELEMENT releve (dateReleve, solde, operations) >
 <!ELEMENT dateReleve (#PCDATA) >
 <!ELEMENT solde (#PCDATA) >
 <!ELEMENT operations (operation+) >
@@ -7,13 +7,13 @@
 
 <!ATTLIST releve RIB NMTOKEN #REQUIRED >
 
-<!ATTLIST operations 
+<!ATTLIST operations
         dateDebut CDATA #REQUIRED
         dateFin CDATA #REQUIRED
     >
-    
-<!ATTLIST operation 
-        type (CREDIT|DEBIT) 'DEBIT'
+
+<!ATTLIST operation
+        type (CREDIT|DEBIT) #REQUIRED 
         date CDATA #REQUIRED
         montant CDATA #REQUIRED
         description CDATA #REQUIRED
