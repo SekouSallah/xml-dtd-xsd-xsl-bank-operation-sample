@@ -107,9 +107,9 @@ Based on the XSD schema, a filtered XML file (`operation-filtered.xml`) is produ
    ```xml
    <?xml-stylesheet type="text/xsl" href="operation.xsl"?>
    ```
-3. Open the XML file in a browser that supports XSLT (Firefox recommended).
+3. Open the XML file in a browser that supports XSLT.
 
-### Using an XSLT processor (Saxon, xsltproc, etc.)
+### Using an XSLT processor (XPath)
 
 ```bash
 xsltproc operation.xsl operation.xml > operation.html
