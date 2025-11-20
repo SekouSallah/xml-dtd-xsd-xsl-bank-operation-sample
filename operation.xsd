@@ -1,46 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <xsd:element name="releve" type="Releve">
-       
-    </xsd:element>
-    
+    <xsd:element name="releve" type="Releve"/>
+
     <xsd:complexType name="Releve">
         <xsd:sequence>
             <xsd:element name="dateReleve" type="xsd:date"/>
             <xsd:element name="solde" type="xsd:double"/>
-            <xsd:element name="operations" type="OperationList"></xsd:element>
+            <xsd:element name="operations" type="OperationList"/>
         </xsd:sequence>
-        <xsd:attribute name="RIB" type="RibConstraint" use="required"></xsd:attribute>
+        <xsd:attribute name="RIB" type="RibConstraint" use="required"/>
     </xsd:complexType>
-    
+
     <xsd:complexType name="OperationList">
         <xsd:sequence>
-            <xsd:element name="operation" type="Operation" maxOccurs="unbounded" />
+            <xsd:element name="operation" type="Operation" maxOccurs="unbounded"/>
         </xsd:sequence>
-        <xsd:attribute name="dateDebut" type="xsd:date" use="required"></xsd:attribute>
-        <xsd:attribute name="dateFin" type="xsd:date" use="required"></xsd:attribute>
+        <xsd:attribute name="dateDebut" type="xsd:date" use="required"/>
+        <xsd:attribute name="dateFin" type="xsd:date" use="required"/>
     </xsd:complexType>
-    
+
     <xsd:complexType name="Operation">
         <!-- Bank Operation are critical, so, I prefer required than define default value for OperationType -->
-        <xsd:attribute name="type" type="OperationType" use="required"></xsd:attribute>
-        <xsd:attribute name="date" type="xsd:date" use="required"></xsd:attribute>
-        <xsd:attribute name="montant" type="xsd:double" use="required"></xsd:attribute>
-        <xsd:attribute name="description" type="xsd:string" use="required"></xsd:attribute>
+        <xsd:attribute name="type" type="OperationType" use="required"/>
+        <xsd:attribute name="date" type="xsd:date" use="required"/>
+        <xsd:attribute name="montant" type="xsd:double" use="required"/>
+        <xsd:attribute name="description" type="xsd:string" use="required"/>
     </xsd:complexType>
-    
+
     <xsd:simpleType name="OperationType">
         <xsd:restriction base="xsd:string">
-            <xsd:enumeration value="CREDIT"></xsd:enumeration>
-            <xsd:enumeration value="DEBIT"></xsd:enumeration>
+            <xsd:enumeration value="CREDIT"/>
+            <xsd:enumeration value="DEBIT"/>
         </xsd:restriction>
     </xsd:simpleType>
-    
-    
+
+
     <xsd:simpleType name="RibConstraint">
         <xsd:restriction base="xsd:string">
-            <xsd:minLength value="11"></xsd:minLength>
-            <xsd:maxLength value="12"></xsd:maxLength>
+            <xsd:minLength value="11"/>
+            <xsd:maxLength value="12"/>
         </xsd:restriction>
     </xsd:simpleType>
 </xsd:schema>
